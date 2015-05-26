@@ -1,0 +1,2 @@
+BAZ
+<%= include("quux.md") %>
