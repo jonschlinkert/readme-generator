@@ -1,7 +1,7 @@
 {
   "name": "readme-generator",
   "description": "Generate your project's README from package.json data.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/jonschlinkert/readme-generator",
   "author": {
     "name": "Jon Schlinkert",
