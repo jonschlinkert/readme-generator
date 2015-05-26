@@ -28,12 +28,15 @@ function render(str, options) {
 }
 
 function include(fp, options) {
-  var str = read(fp);
-  return render(str, options);
+  fp = path.resolve(data.cwd, fp);
+  var file = read(fp);
+  return render(file.contents, options);
 }
 
 function read(fp) {
-  return fs.readFileSync(fp, 'utf8');
+  var str = fs.readFileSync(fp, 'utf8');
+  data.cwd = path.dirname(fp);
+  return {path: fp, contents: str};
 }
 
 function format(str, options) {
