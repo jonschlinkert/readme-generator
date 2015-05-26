@@ -12,12 +12,12 @@ var generator = require('./');
 
 var local = path.join(process.cwd(), '.readme.md');
 if (fs.existsSync(local)) {
-  local = generator.read(local);
+  local = generator.read(local).contents;
 } else {
   local = null;
 }
 
-var template = argv.template || argv.t || local || generator.read('./template.md');
+var template = argv.template || argv.t || local || generator.read(__dirname + '/template.md').contents;
 
 writeFile('README.md', generator.render(template, pkg), function(err) {
   if (err) console.log(err);
