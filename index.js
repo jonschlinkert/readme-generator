@@ -9,22 +9,33 @@
 
 var fs = require('fs');
 var path = require('path');
+var Engine = require('engine');
 var Remarkable = require('remarkable');
 var prettify = require('pretty-remarkable');
 var helpers = require('template-helpers');
+var parseAuthor = require('parse-author');
+var merge = require('mixin-deep');
 var lib = require('./lib');
-var _ = require('lodash');
 
 // data cache
 var data = {};
 
 function render(str, options) {
   options = options || {};
-  var settings = _.extend({}, options.settings);
-  settings.imports = _.merge({include: include}, helpers, lib.helpers);
-  data = _.merge(data, options);
-  var fn = _.template(str, settings);
-  return format(fn(data));
+  var settings = merge({}, options.settings);
+  settings.imports = merge({include: include}, helpers, lib.helpers);
+  var engine = new Engine(settings);
+  data = merge(data, options);
+  data.username = 'unknown';
+
+  if (data.author && typeof data.author === 'string') {
+    data.author = parseAuthor(data.author);
+    if (/github\.com/.test(data.author.url)) {
+      data.username = data.author.url.split('github.com/').pop();
+    }
+  }
+  var res = engine.render(str, data);
+  return format(res);
 }
 
 function include(fp, options) {
@@ -36,7 +47,10 @@ function include(fp, options) {
 function read(fp) {
   var str = fs.readFileSync(fp, 'utf8');
   data.cwd = path.dirname(fp);
-  return {path: fp, contents: str};
+  return {
+    path: fp,
+    contents: str
+  };
 }
 
 function format(str, options) {

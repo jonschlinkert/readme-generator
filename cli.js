@@ -6,7 +6,7 @@ var chalk = require('chalk');
 var symbol = require('log-symbols');
 var argv = require('minimist')(process.argv.slice(2));
 var writeFile = require('write');
-var pkg = require('load-pkg');
+var pkg = require('load-pkg')(process.cwd());
 
 var generator = require('./');
 
