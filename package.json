@@ -1,29 +1,19 @@
 {
   "name": "readme-generator",
-  "description": "Generate your project's README from package.json data.",
-  "version": "0.1.1",
+  "description": "Generate your project's README from package.json data! Need something more powerful and pluggable? Try https://github.com/verbose/verb",
+  "version": "0.2.0",
   "homepage": "https://github.com/jonschlinkert/readme-generator",
-  "author": {
-    "name": "Jon Schlinkert",
-    "url": "https://github.com/jonschlinkert"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jonschlinkert/readme-generator.git"
-  },
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/readme-generator",
   "bugs": {
     "url": "https://github.com/jonschlinkert/readme-generator/issues"
   },
   "license": "MIT",
   "files": [
+    "cli.js",
     "index.js",
-    "lib/",
-    "cli.js"
+    "lib"
   ],
-  "bin": {
-    "readme": "cli.js"
-  },
-  "preferGlobal": true,
   "main": "index.js",
   "engines": {
     "node": ">=0.10.0"
@@ -31,24 +21,36 @@
   "scripts": {
     "test": "mocha"
   },
+  "preferGlobal": true,
+  "bin": {
+    "readme": "cli.js"
+  },
   "dependencies": {
-    "chalk": "^1.0.0",
-    "export-files": "^2.0.1",
-    "load-pkg": "^1.2.0",
-    "lodash": "^3.9.2",
+    "chalk": "^1.1.1",
+    "engine": "^0.1.8",
+    "export-files": "^2.1.0",
+    "load-pkg": "^2.0.1",
     "log-symbols": "^1.0.2",
-    "minimist": "^1.1.1",
+    "minimist": "^1.2.0",
+    "mixin-deep": "^1.1.3",
     "month": "^2.0.1",
     "month-day": "^0.1.1",
-    "pretty-remarkable": "^0.1.4",
+    "parse-author": "^0.2.0",
+    "pretty-remarkable": "^0.1.8",
     "remarkable": "^1.6.0",
-    "template-helpers": "^0.3.2",
-    "write": "^0.2.0",
+    "template-helpers": "^0.3.4",
+    "write": "^0.2.1",
     "year": "^0.2.1"
   },
   "keywords": [
     "generate",
     "generator",
     "readme"
-  ]
+  ],
+  "verb": {
+    "related": {
+      "list": [],
+      "description": ""
+    }
+  }
 }
