@@ -12,7 +12,9 @@
   "files": [
     "cli.js",
     "index.js",
-    "lib"
+    "lib",
+    "templates",
+    "template.md"
   ],
   "main": "index.js",
   "engines": {
