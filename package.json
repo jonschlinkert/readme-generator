@@ -1,7 +1,7 @@
 {
   "name": "readme-generator",
   "description": "Generate your project's README from package.json data! Need something more powerful and pluggable? Try https://github.com/verbose/verb",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/jonschlinkert/readme-generator",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/readme-generator",
