@@ -31,8 +31,8 @@ Pull requests and stars are always welcome. For bugs and feature requests, [plea
 
 **<%= author.name %>**
 
-+ [github/---](https://github.com/---)
-+ [twitter/---](http://twitter.com/---)
++ [github/<%= username %>](https://github.com/<%= username %>)
++ [twitter/<%= username %>](http://twitter.com/<%= username %>)
 
 ## License
 Copyright © <%= year() %> [<%= author.name %>](<%= author.url %>)
