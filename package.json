@@ -1,6 +1,6 @@
 {
   "name": "readme-generator",
-  "description": "Generate your project's README from package.json data! Need something more powerful and pluggable? Try https://github.com/verbose/verb",
+  "description": "Generate your project's README from package.json data! Uses Lo-Dash/Underscore-style templates.",
   "version": "0.2.0",
   "homepage": "https://github.com/jonschlinkert/readme-generator",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
@@ -12,36 +12,34 @@
   "files": [
     "cli.js",
     "index.js",
-    "lib",
-    "templates",
-    "template.md"
+    "template.md",
+    "templates"
   ],
   "main": "index.js",
+  "preferGlobal": true,
+  "bin": {
+    "readme": "cli.js"
+  },
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
     "test": "mocha"
   },
-  "preferGlobal": true,
-  "bin": {
-    "readme": "cli.js"
-  },
   "dependencies": {
-    "chalk": "^1.1.1",
-    "engine": "^0.1.8",
-    "export-files": "^2.1.0",
-    "load-pkg": "^2.0.1",
-    "log-symbols": "^1.0.2",
-    "minimist": "^1.2.0",
+    "engine": "^0.1.12",
+    "expand-pkg": "^0.1.8",
+    "load-pkg": "^3.0.1",
+    "log-ok": "^0.1.1",
     "mixin-deep": "^1.1.3",
     "month": "^2.0.1",
     "month-day": "^0.1.1",
-    "parse-author": "^0.2.0",
-    "pretty-remarkable": "^0.1.8",
-    "remarkable": "^1.6.0",
-    "template-helpers": "^0.3.4",
-    "write": "^0.2.1",
+    "parse-author": "^1.0.0",
+    "pretty-remarkable": "^0.4.0",
+    "remarkable": "^1.7.1",
+    "template-helpers": "^0.6.7",
+    "write": "^0.3.2",
+    "yargs-parser": "^4.2.0",
     "year": "^0.2.1"
   },
   "keywords": [
@@ -49,10 +47,7 @@
     "generator",
     "readme"
   ],
-  "verb": {
-    "related": {
-      "list": [],
-      "description": ""
-    }
+  "devDependencies": {
+    "mocha": "^3.2.0"
   }
 }
