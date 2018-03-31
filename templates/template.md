@@ -40,4 +40,4 @@ Licensed under the <%= license || licenses.join(', ') %> license.
 
 ***
 
-<%= include("templates/footer.md") %>
+<%= include("includes/footer.md") %>
