@@ -12,7 +12,6 @@
   "files": [
     "cli.js",
     "index.js",
-    "template.md",
     "templates"
   ],
   "main": "index.js",
