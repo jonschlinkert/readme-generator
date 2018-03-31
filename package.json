@@ -1,7 +1,7 @@
 {
   "name": "readme-generator",
   "description": "Generate your project's README from package.json data! Uses Lo-Dash/Underscore-style templates.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/jonschlinkert/readme-generator",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/readme-generator",
